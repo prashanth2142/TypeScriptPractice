@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target": "ESNext", // or your desired target version
+      "module": "CommonJS",
+      "outDir": "./dist", // or another output directory of your choice
+      "rootDir": "./src", // or the source directory of your TypeScript files
+      "strict": true
+    }
+  }
+  

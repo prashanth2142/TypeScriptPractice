@@ -1,3 +1,6 @@
+import { absolute, phi, pi } from "./Modules_math";
+
+
 class DataTypes {
     num: number;
     str: string;
@@ -47,3 +50,6 @@ console.log("numbers:", example.numbers);
 
 // Call the greet function
 example.greet();
+
+console.log(pi);
+const absPhi = absolute(phi);

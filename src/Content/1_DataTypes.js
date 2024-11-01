@@ -75,33 +75,40 @@
 // let num: number = 42; // Explicit type annotation
 // let inferredNum = 42; // Type inference, num is also of type number
 
-// Type inference allows TypeScript to determine the most appropriate data type for a variable based on its initialization. You don't always need to explicitly specify types when TypeScript can infer them correctly. This improves code readability and reduces the potential for type-related errors.
+// Type inference allows TypeScript to determine the most appropriate data type for a variable based on its initialization. 
+// You don't always need to explicitly specify types when TypeScript can infer them correctly. 
+// This improves code readability and reduces the potential for type-related errors.
 
 // Type Inference for Object Types: TypeScript can infer object types based on the initial values assigned to objects.
 
 // let personInferred = {
 //     name: "Charlie",
 //     age: 35,
-// }; // TypeScript infers the type { name: string; age: number }
+// };
+// TypeScript infers the type { name: string; age: number }
 
-// let point = { x: 10, y: 20 }; // TypeScript infers the type { x: number; y: number }
+// let point = { x: 10, y: 20 }; 
+// TypeScript infers the type { x: number; y: number }
 
-// In TypeScript, intersection types allow you to combine multiple types into a single type. This means that a value of an intersection type must satisfy all the types it combines. Intersection types are denoted by the & operator.
+// In TypeScript, intersection types allow you to combine multiple types into a single type. 
+// This means that a value of an intersection type must satisfy all the types it combines. Intersection types are denoted by the & operator.
 
 
-// In TypeScript, you can use type guards to differentiate between different types of values at runtime. Type guards are functions or expressions that help TypeScript narrow down the type of a variable within a specific block of code. They are particularly useful when working with union types or when you want to perform type-specific operations on a variable.
+// In TypeScript, you can use type guards to differentiate between different types of values at runtime. 
+// Type guards are functions or expressions that help TypeScript narrow down the type of a variable within a specific block of code. 
+// They are particularly useful when working with union types or when you want to perform type-specific operations on a variable.
 // Here are some common ways to create type guards and differentiate types in TypeScript:
-// typeof Type Guards: You can use the typeof operator to check the type of a variable at runtime. For example:
+// typeof Type Guards: You can use the typeof operator to check the type of a variable at runtime. 
 
+// For example:
+// instanceof Type Guards: When dealing with classes and objects, you can use the instanceof operator to check if an object is an instance of a specific class 
+// or constructor function:
 
-//instanceof Type Guards: When dealing with classes and objects, you can use the instanceof operator to check if an object is an instance of a specific class or constructor function:
+// Custom Type Guards: You can create custom type guards as functions that return a type predicate. 
+// A type predicate is a function that narrows down the type of a variable using the is keyword:
 
-
-//Custom Type Guards: You can create custom type guards as functions that return a type predicate. A type predicate is a function that narrows down the type of a variable using the is keyword:
-
-
-//Type Assertion: You can use type assertion (also known as type casting) to tell TypeScript the type of a variable when you are confident about it. However, be cautious when using type assertion, as it may lead to runtime errors if the assertion is incorrect:
-
+// Type Assertion: You can use type assertion (also known as type casting) to tell TypeScript the type of a variable when you are confident about it.
+// However, be cautious when using type assertion, as it may lead to runtime errors if the assertion is incorrect:
 // let someValue: any = "Hello, TypeScript!";
 // let strLength: number = (someValue as string).length;
 
